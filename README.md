@@ -1,5 +1,4 @@
-# Web Cinema
-
+![Web Cinema](header.gif)
 
 Ever made an animation for the web and thought, I wish I could make that into a gif or a video?!
 
@@ -15,9 +14,8 @@ By providing a JavaScript file with some functions for DOM operations, we genera
 
 ## But what about sound?!
 
-I have no idea! Maybe later. but now I dont know how to implement that. 
+I have no idea! Maybe later. but now I dont know how to implement that.
 
 ## Why is this project still empty
 
 Because I have great ideas but I am dumb and forget to make them reality
-
