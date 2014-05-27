@@ -1,0 +1,30 @@
+.sidebar {
+    background: #666;
+    font-family:Arial,sans-serif;
+    color:#DDD;
+    width:200px;
+    height:100%;
+}
+
+.item,.itemtitle {
+    padding:2px;
+    cursor:default;
+    padding-left:10px;
+}
+
+.item:hover{ 
+    color:white;   
+}
+
+.itemtitle {
+    font-weight:bold;
+}
+
+.itemparent .item {
+    padding-left:20px;
+}
+
+.itemselected {
+    background:#444;
+    color:white;
+}

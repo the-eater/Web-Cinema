@@ -1,4 +1,15 @@
 {
-    "name":"Web Cinema",
-    "main":"main.html"
+  "name": "web-cinema",
+  "version": "0.1.0",
+  "description": "Create GIF's from HTML/CSS and JavaScript",
+  "main": "ide/index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EaterOfCode/Web-Cinema.git"
+  },
+  "author": "Corné 'EaterOfCode' Oppelaar <hello@eaterofco.de>",
+  "bugs": {
+    "url": "https://github.com/EaterOfCode/Web-Cinema/issues"
+  },
+  "homepage": "https://github.com/EaterOfCode/Web-Cinema"
 }

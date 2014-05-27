@@ -3,8 +3,8 @@ project({
     "html":"./main.html",
     "settings":{
         "size":{
-            "width":300,
-            "height":100
+            "width":240,
+            "height":120
         }
     },
     "animations":{
@@ -25,21 +25,14 @@ project({
         }
     },
     "storyboard":{
-        "duration":4000,
+        "duration":2000,
         "items":[{
-            "startTime":500,
-            "type":"animation",
-            "name":"fadeIn",
-            "easing":"quadIn",
-            "duration":1500,
-            "on":".title"
-        },{
-            "startTime":1000,
+            "startTime":0,
             "type":"animation",
             "name":"rotate",
-            "easing":"bounceOut",
+            "easing":"linear",
             "args":{
-                "start":180,
+                "start":0,
                 "end":360
             },
             "duration":2000,
