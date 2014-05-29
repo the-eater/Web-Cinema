@@ -9,11 +9,12 @@ html, body {
 
 .sidebar {
     padding-top:10px;
-    background: #666;
+    background: hsl(150, 52%, 47%);
     font-family:Arial,sans-serif;
-    color:#DDD;
+    color:white;
     width:200px;
     height:100%;
+    box-sizing: border-box;
 }
 
 .item,.itemtitle {
@@ -35,6 +36,22 @@ html, body {
 }
 
 .itemselected {
-    background:#444;
-    color:white;
+    background:#3FC380;
+    color:#eee;
+}
+
+#name {
+    background: transparent;
+    border:none;
+    color:inherit;
+    font-weight: bold;
+    padding: 4px;
+    margin:0;
+    margin-left:-10px;
+    transition: all 0.5s ease;
+}
+
+#name:hover, #name:focus {
+    background: white;
+    color:#3FC380;
 }

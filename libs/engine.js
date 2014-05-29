@@ -1,5 +1,13 @@
 var Easings = require('./easings.js')
 module.exports = {
+    load:function(projFile){
+        var body = new Function('project',projFile);
+        var proj;
+        body(function(project){
+            proj = project;
+        });
+        return proj;
+    },
     createFrame:function(window,time,proj){
         var items = proj.storyboard.items.filter(function(a){
             return a.startTime <= time && (a.startTime + a.duration) >= time;
@@ -12,5 +20,22 @@ module.exports = {
                 }
             }
         });
+    },
+    createNew:function(){
+        return {
+            "name":"New project",
+            "html":"Hello world!",
+            "settings":{
+                "size":{
+                    "width":1920,
+                    "height":1080
+                }
+            },
+            "animations":{},
+            "storyboard":{
+                "duration":3000,
+                "items":[]
+            }
+        };
     }
 }

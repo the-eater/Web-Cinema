@@ -11,5 +11,8 @@
   "bugs": {
     "url": "https://github.com/EaterOfCode/Web-Cinema/issues"
   },
-  "homepage": "https://github.com/EaterOfCode/Web-Cinema"
+  "homepage": "https://github.com/EaterOfCode/Web-Cinema",
+  "dependencies": {
+    "async": "^0.9.0"
+  }
 }

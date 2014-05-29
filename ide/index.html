@@ -2,23 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./css/main.css">
-    <title>Web Cinema - No project open</title>
+    <title>Web Cinema</title>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
 </head>
 <body>
-    <div class="sidebar">
-        <div class="itemtitle">Sample Project</div>
-        <div class="item">Preview</div>
-        <div class="item">HTML</div>
-        <div class="item storyboard">Storyboard</div>
-        <div class="itemparent">
-            <div class="itemtitle">Animations</div>
-            <div class="item itemselected">.fadeIn</div>
-            <div class="item">.rotate</div>
+    <div class="content">
+        <div class="title">
+            <div class="web">Web</div>
+            <div class="cinema">Cinema</div>
+        </div>
+        <div class="menu">
+            <div class="buttons">
+                <div class="button create">Create new project...</div>
+                <div class="button open">Open project...</div>
+            </div>
+            <div class="buttons recent">
+            </div>
         </div>
     </div>
-    <div class="editor">
-        
-    </div>
+    
+    <input style="display:none;" id="open_dialog" type="file" accept="*.wcjs">
 </body>
 </html>

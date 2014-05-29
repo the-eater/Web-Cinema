@@ -1,0 +1,61 @@
+html,body {
+    height: 100%;
+    padding:0;
+    margin: 0;
+    width:100%;
+    background: #3FC380;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.content {
+    top:calc(50% - 200px);
+    position: absolute;
+    height: 400px;
+    width:100%;
+    padding: 30px;
+    box-sizing: border-box;
+    background: #fff;
+    text-align: center;
+}
+
+.web {
+    background: #3FC380;
+    display: inline-block;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+    font-size: 50px;
+    color:#fff;
+    padding: 40px;
+    padding-left: 37px;
+}
+
+.cinema {
+    font-size: 40px;
+}
+
+.menu {
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.buttons {
+    width: 50%;
+    box-sizing: border-box;
+    float:left;
+    height: 120px;
+}
+
+.button {
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    color:white;
+    background: #3FC380;
+}
