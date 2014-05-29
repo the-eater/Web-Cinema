@@ -2,10 +2,12 @@ var fs = require('fs');
 var WebCinema = require('../libs/index.js')
 
 var projPath = false,
-    proj = false;
+    proj = false,
+    editor = false,
+    openItem = false;
 
 $(function(){
-    if(location.hash !== 'new'){
+    if(location.hash !== '#new'){
         var path = unescape(location.hash.substr(1));
         console.log(path);
         fs.exists(path,function(does){
@@ -34,7 +36,7 @@ $(function(){
             }
         });
     }else{
-        proj =    WebCinema.Engine.createNew();
+        proj = WebCinema.Engine.createNew();
         initUI();
     }
 });
@@ -45,13 +47,37 @@ function initUI(){
         $('.collection').append($('<div class="item">').text('.' + ani).data({
             type:'animation',
             name:ani
-        })).click(clickItem);
+        }).click(clickItem));
     });
+    editor = ace.edit($('.editor').get(0));
+    //editor.setTheme("ace/theme/github");
+    editor.getSession().setMode("ace/mode/javascript");
+    editor.session.setOption("useWorker", false);
 };
 
 function clickItem(){
     var type = $(this).data('type');
+    console.log(this,type);
     if(type == "animation"){
-        
+        var name = $(this).data('name');
+        if(openItem) openItem.save();
+        openItem = {
+            save: function(){
+                var code = "";
+                try{
+                    var get = new Function("animation","animation("+editor.getSession().getValue()+")");
+                    get(function(ani){
+                        code = ani;
+                    });
+                }
+                catch(ex){
+                    code = editor.getSession().getValue();
+                }
+                proj.animations[name] = code;
+            }
+        };
+        $('.itemselected').removeClass('itemselected');
+        $(this).addClass('itemselected');
+        editor.getSession().setValue(proj.animations[name].toString());
     }
 }

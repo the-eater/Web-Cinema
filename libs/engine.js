@@ -16,7 +16,7 @@ module.exports = {
             if(a.type == "animation"){
                 var on = window.document.querySelectorAll(a.on);
                 for(var i=0;i<on.length;i++){
-                    proj.animations[a.name].apply(on[i],Easings[a.easing||"linear"]((time - a.startTime) / a.duration),a.args || {});
+                    proj.animations[a.name](on[i],Easings[a.easing||"linear"]((time - a.startTime) / a.duration),a.args || {});
                 }
             }
         });
